@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3 Months With You ❤️</title>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .box {
+      margin-top: 100px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      background: white;
+      color: #ff4d6d;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #main {
+      display: none;
+      padding: 20px;
+    }
+
+    #letter {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .heart {
+      position: fixed;
+      color: pink;
+      animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+      from {transform: translateY(100vh);}
+      to {transform: translateY(-10vh);}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div class="box" id="login">
+  <h2>Enter Password ❤️</h2>
+  <p>(Hint: The day our story started)</p>
+  <input type="password" id="pass">
+  <br>
+  <button onclick="check()">Unlock 💖</button>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main">
+
+  <h1>Happy 3 Months ❤️</h1>
+  <p>From 12/01 till now… every moment with you is special 🥺</p>
+
+  <!-- MUSIC -->
+  <audio id ="music" loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <button onclick="showLetter()">Click to Read My Heart 💌</button>
+
+  <!-- LETTER -->
+  <div id="letter">
+    <p>
+    It’s been 3 months since 12/01… and honestly, these have been the most beautiful days of my life.  
+
+    I never thought someone could mean this much to me in such a short time,  
+    but you proved me wrong in the best way possible.  
+
+    Every conversation, every smile, every small moment with you…  
+    has become something I truly cherish.  
+
+    You didn’t just become important to me,  
+    you became a part of my everyday happiness.  
+
+    When I talk to you, everything feels lighter.  
+    When I think about you, I smile without even realizing it.  
+
+    These 3 months may seem small to others,  
+    but for me, they are full of memories I’ll never forget.  
+
+    And if this is how beautiful 3 months are…  
+    I can’t wait to see what forever with you feels like.  
+
+    Thank you for being in my life,  
+    for being you,  
+    and for making everything so special. 
+    
+    Yrr kuch cheeze meko bhut hurt krti hai yaa me kaise teko kisi ke sath share krlu yrr kaise yrr 
+    but its ok she needs you 
+    and i will always be with you no matter what 
+    just want to tell you that you are the bestest person i have ever met in my life
+    sorry sb cheeze ke liye 
+    i am trying to be perfect yrr but kya kru
+    bchi hu ho jati glti hai please maaf kr denaa yrr sorry for everything 
+    me hmesha sath hu yaad rkhna hmesha rhungi 
+    i will never ever leave you alone 
+    and bhondu tuuh sirf mera hai sirf meraa 
+    agyi na smj kuute 
+    i love you so much 
+    i know me achi nhi hu but yrr dil se pyar hogya terese yrr pgl 
+    bola tha ki pgl nhi huyi hu abhi 
+    but ho chuki hu yrrrr kya kru yrrr mein bta meko 
+    mat chdke jayio yrr kbhi bhi please yrr pleasee 
+    nhi reh skti tere bina 
+    and motuu i know tu " dikhne ch ehna shona me na ehni shoni "
+    but dil se tuh krti hu na tera 
+    i love you bugguuu
+    abse will try to become the girl you want in your life
+    kbhi rone n dungi apni wjh se 
+    sorry 
+    yrr 
+    you are my child bby 
+    want to complete your every dream 
+    want to built a small home with you 
+    i love you so much bubbuuu 
+    you are my everything 
+    sorry for everythinggggg
+    s
+
+    ❤️  
+
+    Happy 3 Month Anniversary…  
+    I’m really lucky to have you 🥺💖  
+    </p>
+
+    <h2>Forever Starts With Us ❤️</h2>
+  </div>
+
+</div>
+
+<script>
+
+// PASSWORD CHECK
+function check() {
+  var password = document.getElementById("pass").value;
+
+  if(password == "1201") {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("main").style.display = "block";
+    startHearts();
+  } else {
+    alert("Wrong password 😢");
+  }
+}
+
+function showLetter() {
+  document.getElementById("letter").style.display = "block";
+  document.getElementByID("music").play();
+}
+
+// FLOATING HEARTS
+function startHearts() {
+  setInterval(() => {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }, 500);
+}
+
+</script>
+
+</body>
+</html>
